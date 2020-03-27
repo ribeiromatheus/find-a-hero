@@ -23,6 +23,7 @@ Be the hero is a web app and mobile app that you can register your NGO and recei
 ### Web
 - [axios](https://github.com/axios/axios)
 - [react-router-dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
+- [react-icons](https://github.com/react-icons/react-icons)
 
 ### Mobile
 - [react-navigation](https://github.com/react-navigation/react-navigation)
