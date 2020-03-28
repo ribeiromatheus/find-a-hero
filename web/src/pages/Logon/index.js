@@ -8,7 +8,7 @@ import heroesImg from '../../assets/heroes.png';
 
 export default function Logon() {
 	return (
-		<div className="longon-container">
+		<div className="logon-container">
 			<section className="form">
 				<img src={logo} alt="Be the Hero" />
 
