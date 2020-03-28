@@ -50,3 +50,22 @@ form input {
   border-radius: 8px;
   padding: 0 24px;
 }
+
+.link {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  color: #41314d;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.link svg {
+  margin-right: 8px;
+}
