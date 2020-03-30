@@ -6,7 +6,7 @@ import './styles.css';
 
 import logo from '../../assets/logo.svg';
 
-export default function Logon() {
+export default function Register() {
 	return (
 		<div className="register-container">
 			<div className="content">
