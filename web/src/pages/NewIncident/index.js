@@ -61,10 +61,10 @@ export default function NewIncident() {
           />
 
           <textarea
-            placeholder="Descrição">
+            placeholder="Descrição"
             value={description}
             onChange={e => setDescription(e.target.value)}
-
+          >
           </textarea>
 
           <input
