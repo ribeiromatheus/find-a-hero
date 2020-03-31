@@ -16,11 +16,21 @@ export default function Profile() {
 
   useEffect(() => {
     api.get('profile', {
-      headers: {
-        ngo_id: ngoId
-      }
+      headers: { ngo_id: ngoId }
     }).then(response => setIncidents(response.data))
   }, [ngoId]);
+
+  async function handleDeleteIncident(id) {
+    try {
+      await api.delete(`incidents/${id}`, {
+        headers: { ngo_id: ngoId }
+      });
+
+      setIncidents(incidents.filter(incident => incident.id !== id));
+    } catch (error) {
+      alert('Erro ao deletar caso, tente novamente.')
+    }
+  }
 
   return (
     <div className="profile-container">
@@ -48,7 +58,7 @@ export default function Profile() {
             <strong>VALOR:</strong>
             <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}</p>
 
-            <button>
+            <button onClick={() => handleDeleteIncident(incident.id)}>
               <FiTrash2 size={20} color="#a8a8b3" />
             </button>
           </li>
