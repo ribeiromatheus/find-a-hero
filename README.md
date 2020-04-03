@@ -1,8 +1,8 @@
-<div style="text-align: center">
+<div align="center">
     <img src="https://user-images.githubusercontent.com/41703972/78392178-28627a80-75be-11ea-80bd-19b687100809.png">
 </div>
 
-<p style="text-align: center">
+<p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ribeiromatheus/find-a-hero">
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/ribeiromatheus/find-a-hero">
