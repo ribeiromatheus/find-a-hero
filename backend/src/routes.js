@@ -28,7 +28,16 @@ routes.get('/incidents', celebrate({
   })
 }), IncidentController.index);
 
-routes.post('/incidents', IncidentController.store);
+routes.post('/incidents', celebrate({
+  [Segments.BODY]: Joi.object().keys({
+    title: Joi.string().required(),
+    description: Joi.string(),
+    value: Joi.number().required()
+  }),
+  [Segments.HEADERS]: Joi.object({
+    ngo_id: Joi.string().required()
+  }).unknown()
+}), IncidentController.store);
 
 routes.delete('/incidents/:id', celebrate({
   [Segments.PARAMS]: Joi.object().keys({
