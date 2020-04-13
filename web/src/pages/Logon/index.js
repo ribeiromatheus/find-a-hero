@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
+import swal from 'sweetalert';
 
 import api from '../../services/api';
 
@@ -25,7 +26,7 @@ export default function Logon() {
 
 			history.push('/profile');
 		} catch (error) {
-			alert('Falha no login, tente novamente');
+			swal('Falha no login', 'Tente novamente', 'error');
 		}
 	}
 

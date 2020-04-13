@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import swal from 'sweetalert';
 
 import api from '../../services/api';
 
@@ -31,11 +32,11 @@ export default function Register() {
 		try {
 			const response = await api.post('ngos', data);
 
-			alert(`Seu ID de acesso: ${response.data.id}`);
+			swal('Sua ONG foi cadastrada com sucesso', `Seu ID de acesso: ${response.data.id}`, 'success');
 
 			history.push('/');
 		} catch (error) {
-			alert('Erro no cadastro, tente novamente');
+			swal('Erro no cadastro', 'Tente novamente', 'error');
 		}
 	}
 

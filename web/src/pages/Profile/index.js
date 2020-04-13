@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
+import swal from 'sweetalert';
 
 import api from '../../services/api';
 
@@ -30,7 +31,7 @@ export default function Profile() {
 
       setIncidents(incidents.filter(incident => incident.id !== id));
     } catch (error) {
-      alert('Erro ao deletar caso, tente novamente.')
+      swal('Erro ao deletar caso', 'Tente novamente.', 'error');
     }
   }
 

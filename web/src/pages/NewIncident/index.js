@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import swal from 'sweetalert';
 
 import api from '../../services/api';
 
@@ -33,7 +34,7 @@ export default function NewIncident() {
 
       history.push('/profile');
     } catch (error) {
-      alert('Erro ao cadastrar caso, tente novamente.')
+      swal('Erro ao cadastrar caso', 'Tente novamente.', 'error');
     }
   }
 
